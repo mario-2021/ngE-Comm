@@ -1,0 +1,33 @@
+
+<div class="w3-container" id="contact" style="margin-top:75px;margin-left: 300px;">
+  <h1 class="w3-xxxlarge w3-text-red"><b>All Student</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">address</th>
+        <th scope="col">phone</th>
+        <th scope="col">website</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataStudent">
+        <th scope="row">{{ item.id }}</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.address.city }}</td>
+        <td>{{ item.phone }}</td>
+        <td>{{ item.website }}</td>
+        <td>
+          <button class="btn btn-info" (click)="details(item.id)">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

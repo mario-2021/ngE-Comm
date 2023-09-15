@@ -1,0 +1,12 @@
+input {
+  width: 100%;
+}
+
+label {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+p {
+  line-height: 2.5rem;
+}

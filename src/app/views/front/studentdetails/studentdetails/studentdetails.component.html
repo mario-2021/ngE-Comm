@@ -1,0 +1,21 @@
+
+<div class="w3-container" id="contact" style="margin-top:75px;margin-left: 300px;">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Student Details</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <ul *ngIf="dataStudent">
+    <!-- <li>{{ dataStudent.id }}</li> -->
+    <li>{{ dataStudent.name }}</li>
+    <li>{{ dataStudent.email }}</li>
+    <li>{{ dataStudent.address.city }}</li>
+    <li>{{ dataStudent.phone }}</li>
+    <li>{{ dataStudent.website }}</li>
+  </ul>
+
+  <div class="alert alert-danger" *ngIf="!dataStudent">
+    We Don`t have this Student in out Database
+  </div>
+
+</div>
+
+
+<router-outlet></router-outlet>

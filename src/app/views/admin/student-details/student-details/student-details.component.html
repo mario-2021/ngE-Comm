@@ -1,0 +1,41 @@
+<p>student-details works!</p>
+
+<ul  *ngIf="dataObject">
+
+  <li>
+    ID: {{ dataObject.id }}
+  </li>
+
+  <li>
+    Name: {{ dataObject.name }}
+  </li>
+
+  <li>
+    User Name: {{ dataObject.username }}
+  </li>
+
+  <li>
+    Email: {{ dataObject.email }}
+  </li>
+
+  <li>
+    City: {{ dataObject.address.city }}
+  </li>
+
+  <li>
+    Phone: {{ dataObject.phone }}
+  </li>
+
+  <li>
+    Website: {{ dataObject.website }}
+  </li>
+
+  <li>
+    Company Name: {{ dataObject.company.name }}
+  </li>
+
+</ul>
+
+<div class="alert alert-danger" *ngIf="messageError">
+  {{ messageError }}
+</div>
